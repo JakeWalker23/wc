@@ -1,26 +1,25 @@
-name: WC - Master
+name: WC - Master CI
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-      - uses: dschep/install-pipenv-action@v1
-        with:
-          version: 2021.5.29
-      - run: |
-          pipenv install
-          pipenv run test
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: pipenv install   
+
+    - name: Run tests
+      run: pipenv run test
