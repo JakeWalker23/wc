@@ -24,4 +24,8 @@ jobs:
           version: 2021.5.29
       - run: |
           pipenv install
-          pipenv run test
+
+      - uses: dschep/install-pipenv-action@v1
+        with:
+          version: 2021.5.29
+      - run: pipenv run test
