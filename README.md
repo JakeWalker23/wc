@@ -1,7 +1,9 @@
 # wc
-A unix like wc tool written in Python
 
-Write Your Own wc Tool
+## A unix like wc tool written in Python
+
+## Write Your Own wc Tool
+
 This challenge is to build your own version of the Unix command line tool wc!
 
 The Unix command line tools are a great metaphor for good software engineering and they follow the Unix Philosophies of:

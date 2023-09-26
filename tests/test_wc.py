@@ -2,10 +2,11 @@ from src.wc import wc
 import unittest
 
 class TestWC(unittest.TestCase):
-    def test_add_numbers(self):
 
+    def test_read_bytes(self):
         wordcount = wc()
+        string = 'jake'
 
-        result = wordcount.add_numbers(2, 2)
+        result = wordcount.read_bytes(string)
 
         self.assertEqual(result, 4)
