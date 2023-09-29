@@ -11,7 +11,6 @@ class TestWC(unittest.TestCase):
 
         self.assertEqual(result, 4)
 
-    
     def test_read_bytes_from_file(self):
         wordcount = wc()
         filepath = 'tests/data/text.txt'
