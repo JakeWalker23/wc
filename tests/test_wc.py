@@ -17,4 +17,4 @@ class TestWC(unittest.TestCase):
 
         result = wordcount.read_bytes_from_file(filepath)
 
-        self.assertEqual(result, 4)
+        self.assertEqual(result, 4) 
