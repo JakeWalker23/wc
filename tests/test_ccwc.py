@@ -8,4 +8,4 @@ class TestCCWC(unittest.TestCase):
         process = subprocess.Popen(["./ccwc.py", "-c", "jake"], stdout=subprocess.PIPE, text=True)
         stdout, stderr = process.communicate()
 
-        self.assertEqual(stdout, 4)
+        self.assertEqual(stdout.strip(), '4')
