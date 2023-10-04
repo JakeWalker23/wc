@@ -5,8 +5,7 @@ class wc:
     def read_bytes_from_file(self, filepath):
         try:
             with open(filepath, 'rb') as file:
-                 file_contents = file.read()
-            file_length = len(file_contents)
-            return file_length
+                file_contents = file.read()
+                return len(file_contents)
         except:
             raise FileNotFoundError
