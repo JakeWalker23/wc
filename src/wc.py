@@ -6,6 +6,6 @@ class wc:
         try:
             with open(filepath, 'rb') as file:
                 file_contents = file.read()
-                return len(file_contents)
+                return f"{len(file_contents)} {filepath}"
         except:
             raise FileNotFoundError

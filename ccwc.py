@@ -13,6 +13,3 @@ bytes = wordcount.read_bytes_from_file(arg2)
 
 print(bytes)
 
-
-# 6794 words SHORT
-
