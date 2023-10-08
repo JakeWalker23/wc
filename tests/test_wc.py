@@ -18,7 +18,7 @@ class TestWC(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             wordcount.read_bytes_from_file(filepath)
     
-    def test_read_lines_from_file(self, filepath):
+    def test_read_lines_from_file(self):
         wordcount = wc()
         filepath = 'tests/data/text.txt'
 
