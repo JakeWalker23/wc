@@ -11,4 +11,9 @@ class wc:
             raise FileNotFoundError
 
     def read_lines_from_file(self, filepath):
-        return f"1 {filepath}"
+        try:
+            with open(filepath, 'rb') as file:
+                file_line_count = file.readlines()
+                return f"{len(file_line_count)} {filepath}"
+        except:
+            raise FileNotFoundError
