@@ -5,9 +5,9 @@ import sys
 
 wordcount = wc()
 
-arguments = sys.argv
+command_line_arguments = sys.argv
 
-arg2 = arguments[2]
+arg2 = command_line_arguments[2]
 
 bytes = wordcount.read_bytes_from_file(arg2)
 
