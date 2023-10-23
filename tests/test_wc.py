@@ -11,7 +11,7 @@ class TestWC(unittest.TestCase):
 
         self.assertEqual(result, "4 tests/data/text.txt") 
 
-    def test_fileNotFound_exception_raised_when_file_does_not_exist(self):
+    def test_fileNotFound_exception_raised_when_file_does_not_exist_read_bytes(self):
         wordcount = wc()
         filepath = 'does/not/exist.txt'
 
@@ -25,3 +25,10 @@ class TestWC(unittest.TestCase):
         result = wordcount.read_lines_from_file(filepath)
 
         self.assertEqual(result, "1 tests/data/text.txt")
+    
+    def test_fileNotFound_exception_raised_when_file_does_not_exist_read_lines(self):
+        wordcount = wc()
+        filepath = 'does/not/exist.txt'
+
+        with self.assertRaises(FileNotFoundError):
+            wordcount.read_lines_from_file(filepath)

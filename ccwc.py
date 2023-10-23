@@ -7,9 +7,12 @@ wordcount = wc()
 
 command_line_arguments = sys.argv
 
-arg2 = command_line_arguments[2]
+command_line_option = command_line_arguments[1]
+command_line_file_path = command_line_arguments[2]
 
-bytes = wordcount.read_bytes_from_file(arg2)
-
-print(bytes)
-
+if command_line_option == '-c': 
+    print(wordcount.read_bytes_from_file(command_line_file_path))
+elif command_line_option == '-l':
+    print(wordcount.read_lines_from_file(command_line_file_path))
+else:
+    print(f"Command line option -d is not supported")

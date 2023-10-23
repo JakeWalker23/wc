@@ -13,4 +13,10 @@ class TestCCWC(unittest.TestCase):
         process = subprocess.Popen(["./ccwc.py", "-l", "text.txt"], stdout=subprocess.PIPE, text=True)
         stdout, stderr = process.communicate()
 
-        self.assertEqual(stdout.strip(), "7137 text.txt")
+        self.assertEqual(stdout.strip(), "7144 text.txt")
+
+    def test_command_line_option_displays_error_message_for_unknown_option(self):
+        process = subprocess.Popen(["./ccwc.py", "-d", "text.txt"], stdout=subprocess.PIPE, text=True)
+        stdout, stderr = process.communicate()
+
+        self.assertEqual(stdout.strip(), "Command line option -d is not supported")
