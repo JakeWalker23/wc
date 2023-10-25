@@ -35,7 +35,7 @@ class TestWC(unittest.TestCase):
 
     def test_read_word_count_from_file(self):
         wordcount = wc()
-        filepath = 'test/data/test.txt'
+        filepath = 'tests/data/text.txt'
 
         result = wordcount.read_words_from_file(filepath)
 

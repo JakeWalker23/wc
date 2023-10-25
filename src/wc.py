@@ -17,3 +17,12 @@ class wc:
                 return f"{len(file_line_count)} {filepath}"
         except:
             raise FileNotFoundError
+
+    def read_words_from_file(self, filepath):
+        try:
+            with open(filepath, 'r') as file:
+                file_contents = file.read()
+                word_count = file_contents.split()
+                return f"{len(word_count)} {filepath}"
+        except:
+            raise FileNotFoundError
