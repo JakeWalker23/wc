@@ -14,5 +14,7 @@ if command_line_option == '-c':
     print(wordcount.read_bytes_from_file(command_line_file_path))
 elif command_line_option == '-l':
     print(wordcount.read_lines_from_file(command_line_file_path))
+elif command_line_option == '-w':
+    print(wordcount.read_words_from_file(command_line_file_path))
 else:
     print(f"Command line option {command_line_option} is not supported")
